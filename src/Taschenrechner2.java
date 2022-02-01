@@ -14,15 +14,16 @@ public class Taschenrechner2 {
 		System.out.println("Bitte geben Sie Ihre Rechnung ein!!");
 		String term = in.nextLine();
 
-		term.replaceAll("[^0-9\\+\\-\\*/()]", ""); // Ungültige Zeichen löschen
-	    String [] klammern = term.split("[()]");
-		String [] operationen = term.split( "[0-9]+");
-		int [] zahlen = Arrays.stream(term.split("[\\+\\-\\*/\\(\\)\\^]")).mapToInt(Integer::parseInt).toArray(); // Liste der
+		//term.replaceAll("[^0-9\\+\\-\\*/()]", ""); // UngÃ¼ltige Zeichen lÃ¶schen
+	  //  String [] klammern = term.split("[()]");
+		//String [] operationen = term.split( "[0-9]+");
+		//int [] zahlen = Arrays.stream(term.split("[\\+\\-\\*/\\(\\)\\^]")).mapToInt(Integer::parseInt).toArray(); // Liste der
+			
         ArrayList<String> operationsList = new ArrayList<String>();
         
         ArrayList<Double> numbersList = new ArrayList<Double>();
 
-        for (int i= 0; i<operationen.length; i++) { // Überführung der Arrays in ArrayLists
+        for (int i= 0; i<operationen.length; i++) { // ÃœberfÃ¼hrung der Arrays in ArrayLists
 			operationsList.add(operationen[i]);}
 	    for (int i= 0; i<zahlen.length; i++) {
 				numbersList.add((double) zahlen[i]);
@@ -91,6 +92,6 @@ public class Taschenrechner2 {
 
 }
 // zahlen und Operatoren in ArrayList speichern
-	//Ausgaben reihenfolge ändern
+	//Ausgaben reihenfolge Ã¤ndern
 
 }
